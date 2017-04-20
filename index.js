@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const version = '5.3.1';
 
-var download = function(url, dest, cb) {
+const download = function(url, dest, cb) {
   request(url)
   .pipe(fs.createWriteStream(dest))
   .on('close', function () {
